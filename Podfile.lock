@@ -1,0 +1,17 @@
+PODS:
+  - JSQMessagesViewController (5.2.0):
+    - JSQSystemSoundPlayer
+  - JSQSystemSoundPlayer (1.5.2)
+  - LTHPasscodeViewController (3.1.4)
+
+DEPENDENCIES:
+  - JSQMessagesViewController
+  - JSQSystemSoundPlayer
+  - LTHPasscodeViewController
+
+SPEC CHECKSUMS:
+  JSQMessagesViewController: 019fe09b5f46fe8e62fb486ae63f5237660af42d
+  JSQSystemSoundPlayer: c24914bc96ff5365b5d28b59d7ecffd60d1c5587
+  LTHPasscodeViewController: 7760bdd524d6ec58732241202de9d1054d2901a4
+
+COCOAPODS: 0.33.1
