@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>05B98B91-A03F-409C-919B-E9CCD53E52FF</string>
+	<string>BFF48C97-F782-4B35-8723-49F884825D2D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>appliedHISP</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>EDC095A0-D48D-46F8-9381-0FDCFFEB4A03</key>
-		<string>https://github.com/olorcain/appliedHISP.git</string>
+		<key>0C6788C6-5303-4606-8803-1D50762CE1E2</key>
+		<string>https://github.com/olorcain/DissertationSubmission.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>appliedHISP.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>EDC095A0-D48D-46F8-9381-0FDCFFEB4A03</key>
+		<key>0C6788C6-5303-4606-8803-1D50762CE1E2</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/olorcain/appliedHISP.git</string>
+	<string>https://github.com/olorcain/DissertationSubmission.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EDC095A0-D48D-46F8-9381-0FDCFFEB4A03</string>
+	<string>0C6788C6-5303-4606-8803-1D50762CE1E2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EDC095A0-D48D-46F8-9381-0FDCFFEB4A03</string>
+			<string>0C6788C6-5303-4606-8803-1D50762CE1E2</string>
 			<key>IDESourceControlWCCName</key>
-			<string>appliedHISP</string>
+			<string>DissertationSubmission</string>
 		</dict>
 	</array>
 </dict>

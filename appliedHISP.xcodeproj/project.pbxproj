@@ -61,7 +61,7 @@
 /* Begin PBXFileReference section */
 		303AEDEA1AFA4387B33C2E89 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		65321AF2A19B4D678445A7B3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		950821D61938B08400D84D42 /* pna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pna.jpg; path = ../../../Desktop/pna.jpg; sourceTree = "<group>"; };
+		950821D61938B08400D84D42 /* pna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pna.jpg; sourceTree = "<group>"; };
 		951DF0111923D2E2002A91EC /* appliedHISP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appliedHISP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951DF0141923D2E2002A91EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		951DF0161923D2E2002A91EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
