@@ -10,6 +10,13 @@
 
 @interface WebInfoViewController ()
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *goBack;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *stop;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *reload;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *goForward;
+@property (weak, nonatomic) IBOutlet UILabel *pageTitle;
+
 @end
 
 @implementation WebInfoViewController
@@ -27,6 +34,28 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.webView.scalesPageToFit = YES;
+    [self loadPageForString:@"http://www.cs.ox.ac.uk/hcbk/"];
+}
+
+- (void)loadPageForString:(NSString *)request
+{
+    NSURL *url = [NSURL URLWithString:request];
+    if(!url.scheme)
+    {
+        NSString* modifiedURLString = [NSString stringWithFormat:@"http://%@", request];
+        url = [NSURL URLWithString:modifiedURLString];
+    }
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:urlRequest];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.webView.delegate = nil;
+    [self.webView stopLoading];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,15 +64,50 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)updateTitle:(UIWebView*)webView
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    self.pageTitle.text = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];;
 }
-*/
+
+- (void)updateButtons
+{
+    self.goForward.enabled = self.webView.canGoForward;
+    self.goBack.enabled = self.webView.canGoBack;
+    self.stop.enabled = self.webView.loading;
+}
+
+- (void)webView:(UIWebView *)wv didFailLoadWithError:(NSError *)error
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    
+    NSString *errorString = [error localizedDescription];
+    NSString *errorTitle = [NSString stringWithFormat:@"Error (%d)", error.code];
+    UIAlertView *errorView =
+    [[UIAlertView alloc] initWithTitle:errorTitle
+                               message:errorString delegate:self cancelButtonTitle:nil
+                     otherButtonTitles:@"OK", nil];
+    [errorView show];
+    [self updateButtons];
+}
+
+#pragma mark - Web View Delegate methods
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self updateButtons];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [self updateButtons];
+    [self updateTitle:webView];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    return YES;
+}
 
 @end

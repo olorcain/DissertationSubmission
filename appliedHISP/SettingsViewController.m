@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import "Constants.h"
 #import "EditProfileViewController.h"
+#import "WebInfoViewController.h"
 #import "LTHPasscodeViewController.h"
 
 @interface SettingsViewController ()
@@ -179,7 +180,7 @@
         EditProfileViewController *epvc = (EditProfileViewController *)segue.destinationViewController;
         epvc.managedObjectContext = self.managedObjectContext;
     } else if  ([segue.identifier isEqualToString:VIEW_WEB_CONTENT_SEGUE_IDENTIFIER]) {
-        // TODO: implement webcontent
+//        WebInfoViewController *wvic = (WebInfoViewController *)segue.destinationViewController;
     }
 }
 
@@ -204,7 +205,14 @@
 
 - (IBAction)returnFromWebContent:(UIStoryboardSegue *)segue
 {
-//    MYModalVC *vc = (MYModalVC *)seque.sourceViewController;
+    if ([segue.sourceViewController isKindOfClass:[WebInfoViewController class]]) {
+        WebInfoViewController *wvic = (WebInfoViewController *)segue.sourceViewController;
+        
+        if (wvic) {
+            // do something in future, no need now
+        }
+
+    }
 }
 
 @end
