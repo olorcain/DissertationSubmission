@@ -15,8 +15,6 @@ Xcode is a free download from [the Mac AppStore](https://itunes.apple.com/en/app
 
 By selecting the "Download Zip" button on the right hand side of the GitHub page, a copy of the application will be added to your local machine.  Because the project uses CocoaPods to import open source libraries, it is best to open the project by double clicking on the appliedHISP.xcworkspace file.  This should load the application into Xcode.  From there it can be run by selecting an iOS device’s simulator from the destination in the upper left and hitting the triangle to compile and run onto that simulator.
 
-![Scheme Menu](https://developer.apple.com/Library/ios/documentation/ToolsLanguages/Conceptual/Xcode_Overview/art/SchemeMenuWithCallouts_2x.png)
-
 [Apple Documentation about running an app.](https://developer.apple.com/Library/ios/documentation/ToolsLanguages/Conceptual/Xcode_Overview/RunYourApp/RunYourApp.html)
 
 Provisioning onto a device requires a provisioning certificate, which is only available if the user has a Developer’s license from Apple.  The process is mostly automated and is explained in detail in [Apple’s documentation.](https://developer.apple.com/library/mac/Documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW2)
